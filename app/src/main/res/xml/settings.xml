@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/prefCat_fb_settings_title">
+		<ListPreference
+			android:defaultValue="100"
+			android:entries="@array/listTextSize"
+			android:entryValues="@array/listValuesTextSize"
+			android:key="pref_textSize"
+			android:summary="@string/summary_textSize"
+			android:title="@string/title_textSize"/>
+
+		<ListPreference
+			android:defaultValue="Standard"
+			android:entries="@array/listThemes"
+			android:entryValues="@array/listValuesThemes"
+			android:key="pref_theme"
+			android:summary="@string/summary_theme"
+			android:title="@string/title_theme"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/prefCat_app_settings_title">
+
+
+		<com.dtube.steem.utils.SwitchWithoutBugs
+			android:defaultValue="false"
+			android:key="pref_enableMessagesShortcut"
+			android:summary="@string/summary_enableMessagesShortcut"
+			android:title="@string/title_enableMessagesShortcut"/>
+
+
+		<!--Set the saving data -->
+		<com.dtube.steem.utils.SwitchWithoutBugs
+			android:defaultValue="false"
+
+			android:key="pref_doNotDownloadImages"
+			android:summary="@string/summary_downloadImages"
+			android:title="@string/title_downloadImages"/>
+
+		<com.dtube.steem.utils.SwitchWithoutBugs
+			android:defaultValue="true"
+			android:key="pref_useDTubeSubfolderToDownloadedFiles"
+			android:summary="@string/summary_useDTubeSubfolderToDownloadedFiles"
+			android:title="@string/title_useDTubeSubfolderToDownloadedFiles"/>
+
+		<!--Allow Geolocation -->
+		<com.dtube.steem.utils.SwitchWithoutBugs
+			android:defaultValue="true"
+
+			android:key="pref_allowGeolocation"
+			android:summary="@string/summary_allowGeolocation"
+			android:title="@string/title_allowGeolocation"/>
+
+		<!--Enable FastShare -->
+		<com.dtube.steem.utils.SwitchWithoutBugs
+			android:defaultValue="true"
+
+			android:key="pref_enableFastShare"
+			android:summary="@string/summary_enableFastShare"
+			android:title="@string/title_enableFastShare"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/supportMe">
+		<!--<Preference android:title="@string/donate"-->
+		<!--android:key="key_donate">-->
+		<!--</Preference>-->
+		<PreferenceScreen
+			android:summary="@string/summary_rate"
+			android:title="@string/title_rate">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="https://play.google.com/store/apps/details?id=com.dtube.steem"/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:summary="@string/donateToContribute"
+			android:title="@string/donateWithSteem">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="https://steemit.com/@haja"
+				/>
+		</PreferenceScreen>
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/prefCat_app_information_title">
+		<PreferenceScreen android:summary="@string/noPersonalInformationAreShared"/>
+
+		<PreferenceScreen
+			android:key="pref_credits"
+			android:title="@string/credits">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:targetClass="com.dtube.steem.settings.CreditsActivity"
+				android:targetPackage="com.dtube.steem"/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:key="pref_key_version"
+			android:title="@string/version"/>
+	</PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="officialDTube">#e80000</color><!--The original color of DTube-->
+
+    <!--standard theme-->
+    <color name="blueDTubeTheme">#e80000</color>
+    <color name="darkBlueDTubeTheme">#110900</color>
+</resources>
